@@ -1,27 +1,22 @@
 # TutorialWebservice
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+Este projeto foi desenvolvido para a demonstrar algumas capacidades do HttpClient, uma abordagem de comunicação de entre o front-end Angular e um backend remoto utilizando JSON.
 
-## Development server
+Este projeto é de caracter puramente didático e tem como ponto de partida desenvolvedores iniciantes na tecnologia para aprendizagem de um recurso específico do Angular. A interface utilizada é bastante inicial e limitada.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Bons Estudos.
 
-## Code scaffolding
+## Backend
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Esse repositório utiliza-se um webservice externo hospedado em `https://banco-dados-teste.glitch.me/`. Ao acessar este endereço, há um período de espera onde a aplicação é reiniciada até seu processo de pausa, que ocorre após 5 minutos de inatividade.
 
-## Build
+### Rotas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+O Backend possui as seguintes rotas:
 
-## Running unit tests
+**/api/produtos** (GET, POST, PUT, DELETE)
+- GET: Retorna os produtos cadastrados
+- POST: Adiciona um novo produto. É necessário repassar as informações `title`, `price` e `description` no corpo da requisição.
+- PUT: Atualiza um produto já cadastrado. É necessário repassar as informações `title`, `price` e `description` no corpo da requisição. É necessário informar o **_id** do produto cadastro diretamente na URL de requisição: (Ex: */api/produtos/607048aa34f27b00cc12a2d4*).
+- DELETE: Remove um produto cadastrado. É necessário informar o **_id** do produto cadastro diretamente na URL de requisição: (Ex: */api/produtos/607048aa34f27b00cc12a2d4*).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
