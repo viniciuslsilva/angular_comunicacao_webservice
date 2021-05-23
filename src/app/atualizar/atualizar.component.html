@@ -1,0 +1,13 @@
+<div>
+    <label>Título
+        <input [(ngModel)]="produto.title" placeholder="Título">
+    </label>
+    <label>Preço
+        <input [(ngModel)]="produto.price" placeholder="Preço">
+    </label>
+    <label>Descrição
+        <textarea [(ngModel)]="produto.description" placeholder="Descrição"></textarea>
+    </label>
+    <button (click)="cancelar()">Cancelar</button>
+    <button (click)="atualizar()">Salvar</button>
+</div> 

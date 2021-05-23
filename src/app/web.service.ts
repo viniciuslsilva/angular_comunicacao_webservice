@@ -10,6 +10,8 @@ export class WebService {
 
   baseURL = "https://banco-dados-teste.glitch.me/api";
 
+  constructor(private http : HttpClient) { }
+
   getProdutos() : Observable<Produto[]> {
     return this.http.get<Produto[]>(this.baseURL + "/produtos");
   }
@@ -22,5 +24,17 @@ export class WebService {
     return this.http.post(this.baseURL + "/produtos", body, {observe: "response"});
   }
 
-  constructor(private http : HttpClient) { }
+  deletarProduto(id: string): Observable<any> {
+    return this.http.delete(`${this.baseURL}/produtos/${id}`);
+  }
+
+  atualizarProduto(produto: Produto) {
+    const body = {
+      title: produto.title,
+      price: produto.price,
+      description: produto.description,
+    };
+    return this.http.put(`${this.baseURL}/produtos/${produto._id}`, body);
+  }
+
 }

@@ -12,6 +12,10 @@
                 <td>{{p.price}}</td>
                 <td>{{p.description}}</td>
                 <td>{{p.title}}</td>
+                <td>
+                    <button (click)="deletarProduto(p._id)">X</button>
+                    <button (click)="atualizarProduto(p)">Editar</button>
+                </td>
             </tr>
         </tbody>
     </table>
