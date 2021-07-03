@@ -9,9 +9,9 @@
         </thead>
         <tbody>
             <tr *ngFor="let p of listaProdutos">
-                <td>{{p.price}}</td>
-                <td>{{p.description}}</td>
-                <td>{{p.title}}</td>
+                <td>{{p.preco}}</td>
+                <td>{{p.descricao}}</td>
+                <td>{{p.titulo}}</td>
                 <td>
                     <button (click)="deletarProduto(p._id)">X</button>
                     <button (click)="atualizarProduto(p)">Editar</button>

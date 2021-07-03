@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Produto } from '../Produto';
 import { WebService } from '../web.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class CadastrarComponent implements OnInit {
 
   @Output() cadastro: EventEmitter<void> = new EventEmitter();
 
-  produto = {title : "", price: 0.0, description: ""};
+  produto = {titulo : "", preco: 0.0, descricao: ""};
 
   constructor(private web : WebService) { }
 
@@ -19,7 +20,7 @@ export class CadastrarComponent implements OnInit {
       if(res.ok == true) {
         alert("O cadastro foi realizado com sucesso");
         this.cadastro.emit();
-        this.produto = {title : "", price: 0.0, description: ""}
+        this.produto = {titulo : "", preco: 0.0, descricao: ""}
       } else {
         alert("O cadastro não foi realizado!");
       }

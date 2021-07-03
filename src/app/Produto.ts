@@ -1,8 +1,8 @@
 export interface Produto {
     _id: string,
-    title: string,
-    description: string,
-    price: number,
+    titulo: string,
+    descricao: string,
+    preco: number,
     createdAt: string,
     updatedAt: string,
     __v: number

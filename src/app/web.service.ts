@@ -8,7 +8,7 @@ import { Observable} from "rxjs";
 })
 export class WebService {
 
-  baseURL = "https://banco-dados-teste.glitch.me/api";
+  baseURL = "https://viniciuslsilva.glitch.me/api";
 
   constructor(private http : HttpClient) { }
 
@@ -18,9 +18,9 @@ export class WebService {
 
   cadastrarProduto(produto) : Observable<any>{
     let body = new HttpParams();
-    body = body.set("title", produto.title);
-    body = body.set("price", String(produto.price));
-    body = body.set("description", produto.description);
+    body = body.set("titulo", produto.titulo);
+    body = body.set("preco", String(produto.preco));
+    body = body.set("descricao", produto.descricao);
     return this.http.post(this.baseURL + "/produtos", body, {observe: "response"});
   }
 
@@ -30,9 +30,9 @@ export class WebService {
 
   atualizarProduto(produto: Produto) {
     const body = {
-      title: produto.title,
-      price: produto.price,
-      description: produto.description,
+      titulo: produto.titulo,
+      preco: produto.preco,
+      descricao: produto.descricao,
     };
     return this.http.put(`${this.baseURL}/produtos/${produto._id}`, body);
   }
