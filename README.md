@@ -8,7 +8,7 @@ Bons Estudos.
 
 ## Backend
 
-Esse repositório utiliza-se um webservice externo hospedado em `https://viniciuslsilva.glitch.me/`. Ao acessar este endereço, há um período de espera onde a aplicação é reiniciada até seu processo de pausa, que ocorre após 5 minutos de inatividade.
+Esse repositório utiliza-se um webservice externo hospedado em `https://viniciuslsilva.glitch.me/`. Ao acessar este endereço, há um período de espera onde a aplicação é reiniciada até seu processo de pausa, que ocorre após 5 minutos de inatividade. O código fonte do webservice externo está disponível no seguinte [link](https://github.com/viniciuslsilva/exemplo_backend_node/)
 
 ### Rotas
 
